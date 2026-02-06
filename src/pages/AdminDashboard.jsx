@@ -37,7 +37,7 @@ function AdminDashboard() {
                 </button>
             ) : (
                 <div className="rounded-xl bg-white p-6 shadow-2xl text-center">
-                    <QRCodeCanvas value={token} size={256} />
+                    <QRCodeCanvas value={`${window.location.origin}/mark-attendance/${token}`} size={256} />
                     <p className="mt-4 text-black font-mono text-sm">{token}</p>
                     <button onClick={() => setToken("")} className="mt-4 text-red-600 text-sm font-bold">RESET / STOP</button>
                 </div>
